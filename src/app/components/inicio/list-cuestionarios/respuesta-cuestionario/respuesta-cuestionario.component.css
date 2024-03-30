@@ -1,0 +1,16 @@
+
+.card{
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+.correct{
+    color:#17A2b8;
+    font-size: 25px;
+    margin-left: -25px;
+}   
+.incorrect{
+    color:#da2d2d;
+    font-size: 25px;
+    margin-left: -25px;
+}

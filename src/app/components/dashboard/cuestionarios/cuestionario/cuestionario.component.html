@@ -1,0 +1,28 @@
+<div class="text-center">
+    <app-loading *ngIf="loading"></app-loading>
+</div>
+<div class="text-center" *ngIf="cuestionario&&!loading">
+    <h4 class="card-title">
+        {{cuestionario.nombre|uppercase}}
+    </h4>
+    <p class="card-text">{{cuestionario.descripcion |uppercase}}</p>
+    <hr>
+    <div class="card" *ngFor="let pregunta of cuestionario.listPreguntas">
+        <div class="card-header">
+            <b>{{pregunta.descripcion}} </b>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let respuesta of pregunta.listRespuesta"
+                [ngClass]="{'list-group-item-success':respuesta.esCorrecta==true}">
+                {{respuesta.descripcion}}
+                <i [ngClass]="{'bi bi-check-circle-fill float-end':respuesta.esCorrecta==true}"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="d-grid mt-5 gap-2">
+            <button class="btn btn-info btn-lg btn-block" routerLink="/dashboard">Volver</button>
+        </div>
+    </div>
+    <br>
+</div>

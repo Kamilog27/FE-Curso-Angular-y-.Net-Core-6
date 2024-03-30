@@ -1,0 +1,10 @@
+.correct{
+    margin-left: -25px;
+    font-size: 29px;
+    color:rgb(47, 50, 209);
+}
+.incorrect{
+    margin-left: -25px;
+    color:#ea3212;
+    font-size: 29px;
+}

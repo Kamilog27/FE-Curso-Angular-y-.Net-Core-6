@@ -1,0 +1,10 @@
+.bi-trash{
+    font-size: 39px;
+    color:rgb(139, 10, 10);
+    cursor: pointer;
+}
+.bi-plus{
+    font-size: 39px;
+    color:rgb(26, 82, 185);
+    cursor: pointer;
+}

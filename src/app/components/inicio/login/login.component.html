@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row" style="width:100%">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center" style="padding: 20px;">
+                <h3>Login</h3>
+                <app-loading *ngIf="loading"></app-loading>
+                <form [formGroup]="login" (ngSubmit)="logeo()" style="padding-top: 10px;">
+                    <div class="form-group" style="text-align: start;">
+                        <input type="text" formControlName="NombreUsuario" class="form-control" placeholder="Usuario">
+                        <span class="text-danger ml-2" *ngIf="login.get('NombreUsuario')?.hasError('required')&&login.get('NombreUsuario')?.touched">
+                            El usuario <strong>es requerido</strong>
+                        </span>
+                    </div>
+                    <div class="form-group mt-2" style="text-align: start;">
+                        <input type="password" formControlName="contraseña" class="form-control" placeholder="Contraseña">
+                        <span class="text-danger ml-2"  *ngIf="login.get('contraseña')?.hasError('required')&&login.get('contraseña')?.touched">
+                            La contraseña <strong>es requerida</strong>
+                        </span>
+                    </div>
+                    <div class="form-group mt-2">
+                        <button class="btn btn-primary mx-2 btn-login" type="submit" [disabled]="this.login.invalid" >Aceptar</button>
+                        <button class="btn btn-secondary" routerLink="/inicio">Volver</button>
+                        
+                    </div>
+                    <div class="form-group mt-2">
+                        <a style="color:#F05f44;cursor: pointer;" routerLink="/inicio/register">Crear Cuenta</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

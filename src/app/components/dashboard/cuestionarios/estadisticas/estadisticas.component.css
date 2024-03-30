@@ -1,0 +1,11 @@
+i{
+    font-size: 29px;
+}
+.bi-search{
+    color:#2470d3;
+    cursor: pointer;
+}
+.bi-trash-fill{
+    color:#cc1c16;
+    cursor: pointer;
+}

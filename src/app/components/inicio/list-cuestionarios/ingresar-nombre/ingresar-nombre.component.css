@@ -1,0 +1,13 @@
+
+.btn-ing{
+    background-color: #f05f44;
+    border-color: #f04f44;
+}
+input[placeholder]{
+    text-align: center;
+}
+
+.card {
+    padding: 20px;
+    width: 100%;
+}

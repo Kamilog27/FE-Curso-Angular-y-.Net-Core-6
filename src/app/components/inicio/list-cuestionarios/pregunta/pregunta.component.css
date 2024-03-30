@@ -1,0 +1,13 @@
+
+.btn-inf{
+    background-color: #f05f44;
+    border-color: #f04f44;
+}
+.list-group-item{
+    cursor: pointer;
+}
+
+.card {
+    padding: 20px;
+    width: 100%;
+}

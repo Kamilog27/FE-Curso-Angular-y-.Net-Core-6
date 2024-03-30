@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h1{
+    color: white;
+}
+hr {
+    margin: auto;
+    border-width: 3px;
+    max-width: 65px;
+    border-color: #f05f44;
+}
+
+.btn-xl {
+    background-color: #f05f44;
+    border-color: #f05f44;
+    margin:10px;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+}
+.btn-xl:hover{
+    background-color: #EE4808;
+    border-radius: #EE4808;
+    border-width: 4px;
+}

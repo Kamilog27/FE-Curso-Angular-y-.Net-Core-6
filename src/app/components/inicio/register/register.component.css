@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.btn-reg{
+    background-color: #f05f44;
+    border-color: #f04f44;
+}

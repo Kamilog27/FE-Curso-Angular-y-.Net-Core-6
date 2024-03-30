@@ -1,0 +1,25 @@
+<div class="card" *ngIf="this.cuestionario&&this.respuestaUsuario.length>0">
+    <h4>Resultado</h4>
+    <p class="card-text">Este es el resultado del cuestionario</p>
+    <div *ngFor="let pregunta of cuestionario.listPreguntas;let i=index">
+        <div class="card-header">
+            <b> {{pregunta.descripcion}} </b>
+        </div>
+        <ul class="list-group" *ngFor="let respuesta of pregunta.listRespuesta">
+            <li class="list-group-item"
+                [ngClass]="{'list-group-item-success':respuesta.esCorrecta==true&&respuestaUsuario[i]==respuesta.id,
+                                                        'list-group-item-danger':respuesta.esCorrecta==false&&respuestaUsuario[i]==respuesta.id}">
+                {{respuesta.descripcion}}
+                <i class="bi-check-circle-fill float-end correct"
+                    *ngIf="respuesta.esCorrecta==true&&respuestaUsuario[i]==respuesta.id"></i>
+                <i class="bi-x-circle-fill float-end incorrect"
+                    *ngIf="respuesta.esCorrecta==false&&respuestaUsuario[i]==respuesta.id"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="d-grid gap-2 mt-3">
+            <button class="btn btn-primary btn-lg" routerLink="/inicio">VOLVER</button>
+        </div>
+    </div>
+</div>
